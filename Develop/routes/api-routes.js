@@ -1,3 +1,8 @@
+const router = require('express').Router();
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
+
+
 router.get('/api/notes',async (req, res) => {
     const dbJson = await JSON.parse(dc.readFileSync('./db/db.json', 'utf8'));
     res.json(dbJson);
